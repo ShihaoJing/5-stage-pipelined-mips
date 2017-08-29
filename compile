@@ -1,0 +1,8 @@
+export VERILATOR_ROOT=/proj/ece401-spring2017/ClassShare/verilator-3.884
+$VERILATOR_ROOT/bin/verilator -O4 --cc MIPS.v --exe sim_main.cpp
+
+cd obj_dir
+
+make -j -f VMIPS.mk VMIPS
+
+cp VMIPS ../
